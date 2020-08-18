@@ -53,6 +53,7 @@ public class EmployeeController {
         Collection<Department> depts = departmentDao.getDepartments();
 
         request.setAttribute("depts", depts);
+        System.out.println("dds");
         return "emp/addemp";
     }
 

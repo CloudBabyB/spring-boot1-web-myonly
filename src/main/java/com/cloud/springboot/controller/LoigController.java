@@ -1,15 +1,13 @@
 package com.cloud.springboot.controller;
 
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.util.Arrays;
-import java.util.Map;
 
 /**
  * @author myBin
@@ -34,7 +32,7 @@ public class LoigController {
             session.setAttribute("username",username);
             return "redirect:/dashboard.html";
         }else {
-            request.setAttribute("msg","用户名密码错误！！！修改");
+            request.setAttribute("msg","用户名密码错误!！！！");
             return "login";
         }
 
