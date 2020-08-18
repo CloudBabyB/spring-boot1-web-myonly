@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>登录成功！！！</h1>
+<!--th：text将div里面的文本内容设置为-->
+<div th:text="${name}"></div>
+<div th:utext="${name}"></div>
+<hr/>
+<table>
+    <tr th:each="arr:${arrlist}">
+        <td>
+            [[${arr}]]
+        </td>
+    </tr>
+    <tr >
+        <td th:each="arr:${arrlist}">
+            [[${arr}]]
+        </td>
+    </tr>
+    <tr >
+        <td th:text="${arr}" th:each="arr:${arrlist}">
+
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
