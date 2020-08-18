@@ -34,7 +34,7 @@ public class LoigController {
             session.setAttribute("username",username);
             return "redirect:/dashboard.html";
         }else {
-            request.setAttribute("msg","用户名密码错误！！！");
+            request.setAttribute("msg","用户名密码错误！！！修改");
             return "login";
         }
 
